@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import TodoItem from "./ToDoItemComponent";
+import { ListGroupItemHeading } from "reactstrap";
 
 export default class ToDoList extends Component {
     render() {
-        const {items} =this.props
-
+        const {items,clearList} =this.props;
+ 
+        console.log(items)
     
         return (
             <ul className="list-group my-5">
@@ -18,7 +20,8 @@ export default class ToDoList extends Component {
                 })}
          
                 <button type="button" className="btn btn-danger
-            btn-block text-capitalize mt-5">
+            btn-block text-capitalize mt-5"
+            onClick={clearList}>
                     clearList
             </button>
             </ul>

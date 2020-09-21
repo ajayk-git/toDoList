@@ -31,7 +31,7 @@ editItem:false
  console.log(newItem);
  const updatedItems=[...this.state.items,newItem];
 
- this.setState=({
+ this.setState({
    items:updatedItems,
    item:"",
    id:uuid(),
@@ -40,10 +40,19 @@ editItem:false
 
 
   };
-  
+  clearList=()=>{
+ this.setState({
+   items:[]
+ })
+
+  }
   render()
 
-  {return (
+  
+  {
+    console.log(this.state.items)
+    return (
+
 
     <div className="container">
     <div className="row">
@@ -55,7 +64,7 @@ editItem:false
     handleSubmit={this.handleSubmit}
     />
 
-      <ToDoList items={this.state.items}/> 
+      <ToDoList items={this.state.items} clearList={this.clearList}/> 
       </div>
       </div>
     </div>
