@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class ToDoItem extends Component{
     render(){
-        const {title}=this.props;
+        const {title,handleDelete}=this.props;
     return (
         
         <li className="list-group-item text-capitalize d-flex
@@ -15,7 +15,7 @@ export default class ToDoItem extends Component{
                 <i className="fas fa-pen"/>
             </span>
 
-            <span className="mx-2 text-danger">
+            <span className="mx-2 text-danger" onClick={handleDelete}>
                 <i className="fas fa-trash"/>
             </span>
         </div>
