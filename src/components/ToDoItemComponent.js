@@ -4,7 +4,7 @@ export default class ToDoItem extends Component{
     render(){
         const {title}=this.props;
     return (
-        <React.Fragment>
+        
         <li className="list-group-item text-capitalize d-flex
         justify-content-between my-2">
 
@@ -20,7 +20,6 @@ export default class ToDoItem extends Component{
             </span>
         </div>
         </li>
-        </React.Fragment>
       
         );
        

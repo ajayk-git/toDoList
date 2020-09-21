@@ -21,7 +21,6 @@ editItem:false
   };
 
   handleSubmit=(e)=>{
-
  e.preventDefault();
  const newItem={
 
