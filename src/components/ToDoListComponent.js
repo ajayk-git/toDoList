@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import TodoItem from "./ToDoItemComponent";
-import { ListGroupItemHeading } from "reactstrap";
 
 export default class ToDoList extends Component {
 
     
     render() {
-        const {items,clearList,handleDelete} =this.props;
+        const {items,clearList,handleDelete,handleEdit } =this.props;
         console.log("todolist****");
         console.log(items)
     
@@ -19,8 +18,9 @@ export default class ToDoList extends Component {
                 return (<TodoItem 
                  key={item.id}
                  title={item.title}
-                 handleDelete={()=>handleDelete(item,id)}
-                 />
+                 handleDelete={()=>handleDelete(item.id)}
+                 handleEdit={()=> handleEdit(item.id)}
+                  />
                  );
               
                 })}
