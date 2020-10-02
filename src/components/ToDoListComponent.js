@@ -6,12 +6,10 @@ export default class ToDoList extends Component {
     
     render() {
         const {items,clearList,handleDelete,handleEdit } =this.props;
-        console.log("todolist****");
-        console.log(items)
     
         return (
             <ul className="list-group my-5">
-               <h3 className="text-capitalize text-center">  To Do 
+               <h3 className="text-capitalize text-center text">  To Do 
                List</h3>
 
                {items.map(item=> {
